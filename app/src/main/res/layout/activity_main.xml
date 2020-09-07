@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main.MainActivity">
+<LinearLayout
+    android:layout_margin="@dimen/_6sdp"
+
+    android:background="@drawable/design_seach"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+
+        app:title="">
+
+    </androidx.appcompat.widget.Toolbar>
+
+</LinearLayout>
+<FrameLayout
+    android:id="@+id/frameLayout"
+    android:layout_weight="6"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btNag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        app:menu="@menu/menu" />
+
+</LinearLayout>
