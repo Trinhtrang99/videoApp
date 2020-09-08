@@ -28,28 +28,28 @@ public class MainActivity extends AppCompatActivity {
         btNag = findViewById(R.id.btNag);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getFragment(Trang_Chu_Fragment.newInstance());
 
-        btNag.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
-
-
+        btNag.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onNavigationItemReselected(@NonNull MenuItem item) {
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 if (item.getItemId() == R.id.home) {
-
                     getFragment(Trang_Chu_Fragment.newInstance());
+                    return true;
                 }
                 if (item.getItemId() == R.id.caNhan) {
 
                     getFragment(Ca_Nhan_Fragment.newInstance());
+                    return true;
                 }
                 if (item.getItemId() == R.id.taikhoan) {
 
                     getFragment(Tai_Xuong_Frangment.newInstance());
+                    return true;
                 }
-
+                return false;
             }
         });
-
     }
 
 
